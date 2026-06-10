@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Playfair Display", Georgia, serif;
+  --font-sans: "Plus Jakarta Sans", Inter, sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+  
+  --color-gold-50: #fdfaf2;
+  --color-gold-100: #f9eed3;
+  --color-gold-200: #edd39c;
+  --color-gold-300: #deb065;
+  --color-gold-400: #d09039;
+  --color-gold-500: #c17522;
+  --color-gold-600: #a25819;
+  --color-gold-700: #813f16;
+  --color-gold-800: #643114;
+  --color-gold-900: #4a2411;
+  
+  --color-maroon-50: #faf2f3;
+  --color-maroon-100: #f4e1e4;
+  --color-maroon-200: #ebc3cb;
+  --color-maroon-300: #db9caa;
+  --color-maroon-400: #ca6e82;
+  --color-maroon-500: #b1445b;
+  --color-maroon-600: #933146;
+  --color-maroon-700: #742234;
+  --color-maroon-800: #581926;
+  --color-maroon-900: #3f121b;
+}
+
+@layer base {
+  body {
+    @apply bg-[#FCFAF6] text-neutral-800 font-sans antialiased;
+  }
+  
+  /* Luxury Custom Scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #FCFAF6;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #deb065;
+    border-radius: 4px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #c17522;
+  }
+}
+
+/* Luxury animations and effects */
+@keyframes slowZoom {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.08); }
+  100% { transform: scale(1); }
+}
+
+.animate-slow-zoom {
+  animation: slowZoom 24s ease-in-out infinite;
+}
+
+/* Glassmorphism for royal UI cards */
+.glass-gold {
+  background: rgba(253, 250, 242, 0.85);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(222, 176, 101, 0.2);
+}
+
+.glass-dark {
+  background: rgba(63, 18, 27, 0.8);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(222, 176, 101, 0.3);
+}
+
+/* Custom fade in animation on scroll handles */
+.fade-in-on-scroll {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-in-on-scroll.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+

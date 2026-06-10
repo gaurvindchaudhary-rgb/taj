@@ -1,0 +1,6 @@
+{
+  "name": "Taj Haveli Agra",
+  "description": "Premium luxury boutique hotel website for Taj Haveli Agra, located near the iconic Taj Mahal, blending royal Mughal aesthetics with modern comfort.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
